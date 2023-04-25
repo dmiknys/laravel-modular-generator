@@ -20,7 +20,7 @@ abstract class ModularGeneratorCommand extends GeneratorCommand
 
     protected function resolveStubPath(string $stub): string
     {
-        return __DIR__ . '/../../../stubs/' . $stub;
+        return __DIR__ . '/../../stubs/' . $stub;
     }
 
     private function getModuledNamespace(string $rootNamespace): string

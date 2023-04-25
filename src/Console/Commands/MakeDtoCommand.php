@@ -7,12 +7,12 @@ use Symfony\Component\Console\Input\InputOption;
 
 class MakeDtoCommand extends ModularGeneratorCommand
 {
-    protected $signature = 'xmake:dto';
+    protected $signature = 'make:dto';
     protected $description = 'Create a DTO class';
 
     protected function getStub(): string
     {
-        return __DIR__ . '/../../../stubs/dto.stub';
+        return $this->resolveStubPath('dto.stub');
     }
 
     protected function buildClass($name): string
