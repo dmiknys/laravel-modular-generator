@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 
 class LaravelModularGeneratorServiceProvider extends ServiceProvider
 {
-    public const CONFIG = 'laravel-modular-generator';
+    public const CONFIG = 'modular-generator';
 
     /**
      * Bootstrap the application services.
@@ -16,10 +16,10 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../../config/config.php' => config_path('modular-generator.php'),
+                __DIR__ . '/../../config/config.php' => config_path(sprintf('%s.php', self::CONFIG)),
             ], 'config');
 
-             $this->commands($this->getCommands());
+            $this->commands($this->getCommands());
         }
     }
 
@@ -28,7 +28,7 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../../config/config.php', self::CONFIG);
+        $this->mergeConfigFrom(__DIR__ . '/../../config/config.php', self::CONFIG);
     }
 
     private function getCommands(): array
