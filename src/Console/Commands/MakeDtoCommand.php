@@ -11,15 +11,15 @@ class MakeDtoCommand extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        return parent::getDefaultNamespace($this->getModularNamespace($rootNamespace));
+        return parent::getDefaultNamespace($this->getModuledNamespace($rootNamespace));
     }
 
-    protected function getStub()
+    protected function getStub(): string
     {
         return __DIR__ . '/../../../stubs/dto.stub';
     }
 
-    private function getModularNamespace(string $rootNamespace): string
+    private function getModuledNamespace(string $rootNamespace): string
     {
         $module = $this->option('module');
 
