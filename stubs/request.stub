@@ -3,7 +3,7 @@
 namespace {{ namespace }};
 
 use App\Modules\Abstract\AbstractFormRequest;
-{{ DTOImport }}
+use {{ DTOImport }};
 
 class {{ class }} extends AbstractFormRequest
 {

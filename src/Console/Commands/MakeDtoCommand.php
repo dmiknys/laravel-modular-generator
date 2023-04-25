@@ -3,12 +3,14 @@
 namespace Dmiknys\LaravelModularGenerator\Console\Commands;
 
 use Dmiknys\LaravelModularGenerator\Services\ModularGeneratorCommand;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
 class MakeDtoCommand extends ModularGeneratorCommand
 {
-    protected $signature = 'make:dto';
+    protected $signature = 'make:dto {name} {--module=}';
     protected $description = 'Create a DTO class';
+    protected $type = 'Data transfer object';
 
     protected function getStub(): string
     {
@@ -30,6 +32,13 @@ class MakeDtoCommand extends ModularGeneratorCommand
         return [
             ['force', 'f', InputOption::VALUE_NONE, 'Create the class even if the resource already exists'],
             ['module', 'm', InputOption::VALUE_REQUIRED, 'Create a DTO in the specified module'],
+        ];
+    }
+
+    protected function getArguments()
+    {
+        return [
+            ['name', InputArgument::REQUIRED, 'The name of the ' . strtolower($this->type)],
         ];
     }
 

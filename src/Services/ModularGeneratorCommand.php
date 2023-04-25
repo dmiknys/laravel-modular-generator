@@ -23,12 +23,12 @@ abstract class ModularGeneratorCommand extends GeneratorCommand
         return __DIR__ . '/../../stubs/' . $stub;
     }
 
-    private function getModuledNamespace(string $rootNamespace): string
+    protected function getModuledNamespace(string $rootNamespace, ?string $entity = null): string
     {
         $parts = [
             config('modular-generator.namespace', $rootNamespace),
             $this->option('module'),
-            $this->getEntityNamespace(),
+            $entity ?? $this->getEntityNamespace(),
         ];
 
         return implode('\\', array_filter($parts));
