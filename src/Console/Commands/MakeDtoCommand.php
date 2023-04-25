@@ -2,7 +2,7 @@
 
 namespace Dmiknys\LaravelModularGenerator\Console\Commands;
 
-use Wedevlt\LaravelModularGenerator\Services\ModularGeneratorCommand;
+use Dmiknys\LaravelModularGenerator\Services\ModularGeneratorCommand;
 
 class MakeDtoCommand extends ModularGeneratorCommand
 {

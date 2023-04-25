@@ -1,6 +1,6 @@
 <?php
 
-namespace Wedevlt\LaravelModularGenerator\Services;
+namespace Dmiknys\LaravelModularGenerator\Services;
 
 use Illuminate\Console\GeneratorCommand;
 
@@ -30,11 +30,7 @@ abstract class ModularGeneratorCommand extends GeneratorCommand
             $this->option('module'),
             $this->getEntityNamespace(),
         ];
-        
-        dd(implode('\\', array_filter($parts)));
 
-        return $module
-            ? config('modular-generator.namespace', $rootNamespace) . '\\' . $module . '\\Dtos'
-            : config('modular-generator.namespace', $rootNamespace) . '\\Dtos';
+        return implode('\\', array_filter($parts));
     }
 }
