@@ -45,11 +45,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dmiknys\\LaravelModularGenerator\\LaravelModularGeneratorServiceProvider"
-            ],
-            "aliases": {
-                "LaravelModularGenerator": "Dmiknys\\LaravelModularGenerator\\LaravelModularGeneratorFacade"
-            }
+                "Dmiknys\\LaravelModularGenerator\\Providers\\LaravelModularGeneratorServiceProvider"
+            ]
         }
     }
 }
