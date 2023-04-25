@@ -26,6 +26,12 @@ composer require --dev dmiknys/laravel-modular-generator
 composer test
 ```
 
+### Setup
+
+```bash
+php artisan vendor:publish --provider="Dmiknys\LaravelModularGenerator\Providers\LaravelModularGeneratorServiceProvider" --tag="config"
+```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
