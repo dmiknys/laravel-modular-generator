@@ -16,7 +16,7 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../../config/config.php' => config_path('laravel-modular-generator.php'),
+                __DIR__.'/../../config/config.php' => config_path('modular-generator.php'),
             ], 'config');
 
              $this->commands($this->getCommands());
