@@ -11,11 +11,6 @@ abstract class ModularGeneratorCommand extends GeneratorCommand
         return '';
     }
 
-    protected function getConfig(): string
-    {
-        return config('modular-generator');
-    }
-
     abstract protected function getEntityNamespace(): string;
 
     protected function getDefaultNamespace($rootNamespace): string

@@ -6,7 +6,7 @@ use Dmiknys\LaravelModularGenerator\Services\ModularGeneratorCommand;
 
 class MakeDtoCommand extends ModularGeneratorCommand
 {
-    protected $signature = 'make:dto {name} {--module=}';
+    protected $signature = 'xmake:dto {name} {--module=}';
     protected $description = 'Create DTO class';
 
     protected function getStub(): string
