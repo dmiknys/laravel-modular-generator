@@ -4,7 +4,7 @@ namespace Dmiknys\LaravelModularGenerator\Console\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 
-class CreateDTOCommand extends GeneratorCommand
+class MakeDtoCommand extends GeneratorCommand
 {
     protected $signature = 'make:dto';
     protected $description = 'Creates DTO class';

@@ -1,27 +1,12 @@
 <?php
 
-namespace {{ namespace }};
-
-use Dmiknys\LaravelModularGenerator\Interfaces\Filter;
-use Illuminate\Database\Query\Builder;
-
-class {{ class }} implements Filter
-{
-    public function filter(Builder $builder, string $column, mixed $value): Builder
-    {
-        // return $builder->where($column, $value);
-    }
-}
-
-<?php
-
 declare(strict_types=1);
 
-namespace App\Modules\Common\Dtos;
+namespace {{ namespace }};
 
 use Spatie\LaravelData\Data;
 
-class ListRequestDto extends Data
+class {{ class }} extends Data
 {
     public array $filters = [];
     public ?string $q = null;
