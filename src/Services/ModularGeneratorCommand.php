@@ -23,6 +23,11 @@ abstract class ModularGeneratorCommand extends GeneratorCommand
         return parent::getDefaultNamespace($this->getModuledNamespace($rootNamespace));
     }
 
+    protected function resolveStubPath(string $stub): string
+    {
+        return __DIR__ . '/../../../stubs/' . $stub;
+    }
+
     private function getModuledNamespace(string $rootNamespace): string
     {
         $parts = [

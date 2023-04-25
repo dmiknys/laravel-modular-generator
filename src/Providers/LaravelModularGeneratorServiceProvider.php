@@ -3,6 +3,7 @@
 namespace Dmiknys\LaravelModularGenerator\Providers;
 
 use Dmiknys\LaravelModularGenerator\Console\Commands\MakeDtoCommand;
+use Dmiknys\LaravelModularGenerator\Console\Commands\MakeResourceCommand;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelModularGeneratorServiceProvider extends ServiceProvider
@@ -33,20 +34,14 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
 
     private function getCommands(): array
     {
-        $config = config(self::CONFIG);
-        $commands = $this->getGeneratorCommands();
-
-        if ($config['dto_class'] === null) {
-            unset($commands['make-dto']);
-        }
-
-        return $commands;
+        return $this->getGeneratorCommands();
     }
 
     private function getGeneratorCommands(): array
     {
         return [
             'make-dto' => MakeDtoCommand::class,
+            'make-resource' => MakeResourceCommand::class,
         ];
     }
 }
