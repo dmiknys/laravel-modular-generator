@@ -1,11 +1,11 @@
 <?php
 
-namespace Wedevlt\LaravelModularGenerator;
+namespace Dmiknys\LaravelModularGenerator;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Wedevlt\LaravelModularGenerator\Skeleton\SkeletonClass
+ * @see \Dmiknys\LaravelModularGenerator\Skeleton\SkeletonClass
  */
 class LaravelModularGeneratorFacade extends Facade
 {

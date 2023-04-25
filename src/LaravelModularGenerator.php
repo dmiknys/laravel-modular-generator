@@ -1,6 +1,6 @@
 <?php
 
-namespace Wedevlt\LaravelModularGenerator;
+namespace Dmiknys\LaravelModularGenerator;
 
 class LaravelModularGenerator
 {

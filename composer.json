@@ -1,11 +1,11 @@
 {
-    "name": "wedevlt/laravel-modular-generator",
+    "name": "dmiknys/laravel-modular-generator",
     "description": "This package helps generate scaffolding for project with modular architecture",
     "keywords": [
-        "wedevlt",
+        "dmiknys",
         "laravel-modular-generator"
     ],
-    "homepage": "https://github.com/wedevlt/laravel-modular-generator",
+    "homepage": "https://github.com/dmiknys/laravel-modular-generator",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,21 +16,22 @@
         }
     ],
     "require": {
-        "php": "^7.4|^8.0",
-        "illuminate/support": "^8.0"
+        "php": "^8.2",
+        "illuminate/support": "^10.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0"
+        "orchestra/testbench": "^8.0",
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10"
     },
     "autoload": {
         "psr-4": {
-            "Wedevlt\\LaravelModularGenerator\\": "src"
+            "Dmiknys\\LaravelModularGenerator\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Wedevlt\\LaravelModularGenerator\\Tests\\": "tests"
+            "Dmiknys\\LaravelModularGenerator\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Wedevlt\\LaravelModularGenerator\\LaravelModularGeneratorServiceProvider"
+                "Dmiknys\\LaravelModularGenerator\\LaravelModularGeneratorServiceProvider"
             ],
             "aliases": {
-                "LaravelModularGenerator": "Wedevlt\\LaravelModularGenerator\\LaravelModularGeneratorFacade"
+                "LaravelModularGenerator": "Dmiknys\\LaravelModularGenerator\\LaravelModularGeneratorFacade"
             }
         }
     }

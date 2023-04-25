@@ -1,8 +1,8 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/wedevlt/laravel-modular-generator.svg?style=flat-square)](https://packagist.org/packages/wedevlt/laravel-modular-generator)
-[![Total Downloads](https://img.shields.io/packagist/dt/wedevlt/laravel-modular-generator.svg?style=flat-square)](https://packagist.org/packages/wedevlt/laravel-modular-generator)
-![GitHub Actions](https://github.com/wedevlt/laravel-modular-generator/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dmiknys/laravel-modular-generator.svg?style=flat-square)](https://packagist.org/packages/dmiknys/laravel-modular-generator)
+[![Total Downloads](https://img.shields.io/packagist/dt/dmiknys/laravel-modular-generator.svg?style=flat-square)](https://packagist.org/packages/dmiknys/laravel-modular-generator)
+![GitHub Actions](https://github.com/dmiknys/laravel-modular-generator/actions/workflows/main.yml/badge.svg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
