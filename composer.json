@@ -1,0 +1,54 @@
+{
+    "name": "wedevlt/laravel-modular-generator",
+    "description": "This package helps generate scaffolding for project with modular architecture",
+    "keywords": [
+        "wedevlt",
+        "laravel-modular-generator"
+    ],
+    "homepage": "https://github.com/wedevlt/laravel-modular-generator",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dovydas Miknys",
+            "email": "dovis.miknis@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wedevlt\\LaravelModularGenerator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wedevlt\\LaravelModularGenerator\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wedevlt\\LaravelModularGenerator\\LaravelModularGeneratorServiceProvider"
+            ],
+            "aliases": {
+                "LaravelModularGenerator": "Wedevlt\\LaravelModularGenerator\\LaravelModularGeneratorFacade"
+            }
+        }
+    }
+}
