@@ -16,7 +16,7 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-modular-generator.php'),
+                __DIR__.'/../../config/config.php' => config_path('laravel-modular-generator.php'),
             ], 'config');
 
              $this->commands($this->getCommands());
@@ -28,7 +28,7 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'config');
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', self::CONFIG);
     }
 
     private function getCommands(): array
