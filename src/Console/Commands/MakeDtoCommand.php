@@ -8,7 +8,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 class MakeDtoCommand extends ModularGeneratorCommand
 {
-    protected $signature = 'make:dto {name} {--module=}';
+    protected $name = 'make:dto';
     protected $description = 'Create a DTO class';
     protected $type = 'Data transfer object';
 
