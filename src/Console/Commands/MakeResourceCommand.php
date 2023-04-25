@@ -5,6 +5,7 @@ namespace Dmiknys\LaravelModularGenerator\Console\Commands;
 use Dmiknys\LaravelModularGenerator\Services\ModularGeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;
 
+// TODO: Figure out how to use illuminate/foundation/Console/ResourceMakeCommand instead of this
 class MakeResourceCommand extends ModularGeneratorCommand
 {
     protected $name = 'make:resource';

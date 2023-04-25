@@ -3,6 +3,7 @@
 namespace Dmiknys\LaravelModularGenerator\Providers;
 
 use Dmiknys\LaravelModularGenerator\Console\Commands\MakeDtoCommand;
+use Dmiknys\LaravelModularGenerator\Console\Commands\MakeRequestCommand;
 use Dmiknys\LaravelModularGenerator\Console\Commands\MakeResourceCommand;
 use Illuminate\Support\ServiceProvider;
 
@@ -42,6 +43,7 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
         return [
             'make-dto' => MakeDtoCommand::class,
             'make-resource' => MakeResourceCommand::class,
+            'make-request' => MakeRequestCommand::class,
         ];
     }
 }
