@@ -7,7 +7,7 @@ use Symfony\Component\Console\Input\InputOption;
 
 class MakeResourceCommand extends ModularGeneratorCommand
 {
-    protected $name = 'xmake:resource {--module=}';
+    protected $name = 'make:resource';
     protected $description = 'Create a new resource';
     protected $type = 'Resource';
 
@@ -38,6 +38,7 @@ class MakeResourceCommand extends ModularGeneratorCommand
         return [
             ['force', 'f', InputOption::VALUE_NONE, 'Create the class even if the resource already exists'],
             ['collection', 'c', InputOption::VALUE_NONE, 'Create a resource collection'],
+            ['module', 'm', InputOption::VALUE_REQUIRED, 'Create a resource in the specified module'],
         ];
     }
 

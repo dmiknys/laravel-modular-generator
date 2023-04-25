@@ -3,11 +3,12 @@
 namespace Dmiknys\LaravelModularGenerator\Console\Commands;
 
 use Dmiknys\LaravelModularGenerator\Services\ModularGeneratorCommand;
+use Symfony\Component\Console\Input\InputOption;
 
 class MakeDtoCommand extends ModularGeneratorCommand
 {
-    protected $signature = 'xmake:dto {name} {--module=}';
-    protected $description = 'Create DTO class';
+    protected $signature = 'xmake:dto';
+    protected $description = 'Create a DTO class';
 
     protected function getStub(): string
     {
@@ -22,6 +23,14 @@ class MakeDtoCommand extends ModularGeneratorCommand
             ->replaceDtoImport($stub, config('modular-generator.dto_class'))
             ->replaceDtoInheritance($stub, config('modular-generator.dto_class'))
             ->replaceClass($stub, $name);
+    }
+
+    protected function getOptions()
+    {
+        return [
+            ['force', 'f', InputOption::VALUE_NONE, 'Create the class even if the resource already exists'],
+            ['module', 'm', InputOption::VALUE_REQUIRED, 'Create a DTO in the specified module'],
+        ];
     }
 
     protected function getEntityNamespace(): string
