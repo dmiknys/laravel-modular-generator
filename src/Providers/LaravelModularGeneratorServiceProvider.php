@@ -28,7 +28,7 @@ class LaravelModularGeneratorServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', self::CONFIG);
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'config');
     }
 
     private function getCommands(): array
